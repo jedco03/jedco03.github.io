@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+	<link rel = "icon" href = "https://img.icons8.com/avantgarde/256/r.png" type = "image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Pascual_SemiFinals</title>
+</head>
+<style>
+		body{
+			height: 100%;
+		}
+</style>
+<body>
+
+    
+
+    <div class="container">
+
+    <input type="number"  placeholder="Start number" id="firstnum"><br>
+    <input style="margin-top: 10px;" type="number"  placeholder="End number"id="secondnum"><br>
+    <button style="margin-top: 10px;" id="btn" class="btn btn-success">Submit</button>
+    <button style="margin-top: 10px;" id="btn-hide-show" class="btn btn-secondary">Hide/Show</button>
+    <br><br>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover" id="mytbl">
+            <thead>
+                <tr> 
+                    
+                </tr>
+            </thead>
+        </table>
+    </div>
+        
+    </div>
+    
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+$("#btn").click(function(){
+    var getfirstnum = $("#firstnum").val();
+    var getsecondnum = $("#secondnum").val();
+    var pro = Number(getfirstnum) * 1;
+    var i;
+    $('#mytbl').empty();
+    for (var i = 1; i <+ getsecondnum; i++) {
+        $('#mytbl').append('<tr><td>'+ getfirstnum + " x " + i + " = " + (pro * i) + '</td> <td>' + 3 + " x " + i + " = " + ((pro + 1)*i) +'</td> <td>' + 4 + " x " + i + " = " + ((pro + 2)*i) +'</td><td>' + 5 + " x " + i + " = " + ((pro + 3)*i) +'</td></tr>' );
+        
+    }
+
+    });
+   $("#btn-hide-show").click(function(){
+        $("#mytbl").fadeToggle();
+    });
+});
+</script>
+</html>

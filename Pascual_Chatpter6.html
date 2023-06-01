@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 4 - Navigation Bar</title>
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+  	<style>
+  		hr {
+  			width: 80%;
+  		}
+
+
+
+
+
+
+  	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" >
+		<div class="container">
+			<div class="navbar-header"> <!-- for logo's-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsable">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand" style="color: black">TUA Learning</a>
+			</div>
+			<div class="collapse navbar-collapse" id="collapsable">
+				<ul class="nav navbar-nav"> <!-- body of nav bar-->
+					<li><a href="#" style="color: black">TUA Community</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: black"> TUA Admin <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" style="color: black">TUA Admin</a></li>
+							<hr>
+							<li><a href="#" style="color: black">T3 Training 2022</a></li>
+							<li><a href="#" style="color: black">TLC Faculty Tutorial</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.facebook.com/" style="color: black">TUA Academics</a></li>
+					<li><a href="https://www.youtube.com/" style="color: black">TUA Helphub</a></li>
+					<button class="btn btn-info navbar-btn">About</button>
+				</ul>
+				<ul class="nav navbar-nav navbar-right"> <!-- right side of navbar-->
+					<li><a href="#"><span class="glyphicon glyphicon-floppy-saved" style="color: black"> </span> Sign up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-user" style="color: black"> </span> Log in</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav><br><br><br>
+
+
+	<div class="container" style="padding-top: 20px;">
+		<div class="row">
+			
+			<div class="col-sm-12">
+				<div class="jumbotron" style="background-color: #D9D8C6;">
+					<h1 style="font-family: 'Montserrat', sans-serif;">Jeffrey Miguel P. Pascual</h1>
+				</div>
+				
+				<br>
+				<div style="align-items: center ;"><button class="btn btn-success" id="button">Why TLC?</button></div>
+				<p id="pharagraph">The TLC system core Moodle will provide integrated toolsets, functionalities, and the latest online application for its delivery of courses; it is a cloud based solution that will maximize the use of mobile phones, tablets, PC, and laptops to make the learning experience more accessible, flexible, and cost effective both for faculty members and students.
+				Additionally, it will make learning more organized and streamlined and will provide faculty members and students everything needed to manage online classes in a secure and centralized environment. With this environment, students can download lectures, access assignments, take exams online, collaborate with other students, interact with teachers in a setting where students learn at their own pace, anytime and anywhere. While learning is digitized, TUA ensures that in-TLC Trinity, students' socio-emotional needs are also met through teaching and learning activities that are fun, with love, care and compassion that allows students to express themselves and be guided towards a meaningful understanding not only of their subjects, but its relevance to their life.</p>
+			</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		$("#button").click(function(){
+  $("#pharagraph").fadeToggle();
+
+ });
+	</script>
+</html>
